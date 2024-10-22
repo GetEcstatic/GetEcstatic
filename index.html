@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pat Paige Freediving Tours and Coaching</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0f7fa; /* Unified background color */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center; /* No separate background color */
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3.5em; /* Larger title for PAT PAIGE */
+            font-family: Monaco, monospace; /* Monaco font */
+            text-transform: uppercase;
+        }
+        h2 {
+            margin: 0;
+            font-size: 1.3em; /* Smaller subtitle */
+            font-family: Monaco, monospace; /* Monaco font */
+            color: grey; /* Grey color for subtitle */
+            text-transform: uppercase;
+            margin-top: 10px; /* Some spacing between title and subtitle */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 20px;
+            font-size: 1.0em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: grey;
+            transition: color 0.3s ease;
+        }
+        nav a.active {
+            color: #87ceeb; /* Baby blue for selected menu item */
+        }
+        nav a:hover {
+            color: #87ceeb;
+        }
+        section {
+            padding: 30px;
+            text-align: center;
+        }
+        .tour-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .tour {
+            width: 30%;
+            margin: 15px;
+            position: relative;
+            background-color: #b3e5fc;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .tour img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tour .location-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+        }
+        .tour .hover-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(173, 216, 230, 0.95);
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            z-index: 1;
+            text-transform: uppercase;
+            border-radius: 20px;
+        }
+        .tour:hover .hover-text {
+            opacity: 1;
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .tour {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PAT PAIGE</h1>
+    <h2>Tours | Workshops | Coaching</h2>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Upcoming for 2025</h2>
+    <div class="tour-gallery">
+        <div class="tour">
+            <img src="Bunaken-1.jpg" alt="Manado">
+            <div class="location-text">Manado, North Sulawesi <br> March 2025</div>
+            <div class="hover-text">
+                <p>Guided Depth Dives + Advanced Coaching</p>
+                <p>6D 5N - USD 1,750 All Incl.</p>
+                <p>Target Depth: 40m-60m</p>
+            </div>
+        </div>
+        <div class="tour">
+            <img src="Jakarta-1.jpg" alt="Jakarta">
+            <div class="location-text">Jakarta, Indonesia <br> April 2025</div>
+            <div class="hover-text">
+                <p>3-Day Competition Training Workshop</p>
+                <p>3D 2N - USD 250 Course Only</p>
+                <p>Pool-Based Training</p>
+            </div>
+        </div>
+        <div class="tour">
+            <img src="Coron-1.jpg" alt="Coron">
+            <div class="location-text">Coron, Philippines <br> May 2025</div>
+            <div class="hover-text">
+                <p>Freediving Expedition + Wreck Exploration</p>
+                <p>6D 5N - USD 1,100 All Incl.</p>
+                <p>Target Depth: 30m-50m</p>
+            </div>
+        </div>
+        <div class="tour">
+            <img src="Kl-1.jpg" alt="Kuala Lumpur">
+            <div class="location-text">Kuala Lumpur, Malaysia <br> June 2025</div>
+            <div class="hover-text">
+                <p>3-Day Competition Training Workshop</p>
+                <p>3D 2N - USD 280 Course Only</p>
+                <p>Focus On Static Apnea</p>
+            </div>
+        </div>
+        <div class="tour">
+            <img src="Morotai-1.jpg" alt="Morotai">
+            <div class="location-text">Morotai, Indonesia <br> July 2025</div>
+            <div class="hover-text">
+                <p>Shark Diving + Wreck Diving</p>
+                <p>6D 5N - USD 2,250 All Incl.</p>
+                <p>Advanced Depth Coaching</p>
+            </div>
+        </div>
+        <div class="tour">
+            <img src="Bali-1.jpg" alt="Bali">
+            <div class="location-text">Bali, Indonesia <br> August 2025</div>
+            <div class="hover-text">
+                <p>PFI Technical Freediving + Wreck Diving</p>
+                <p>3D 2N - USD 1,300 All Incl.</p>
+                <p>Improve Dynamic Apnea</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
