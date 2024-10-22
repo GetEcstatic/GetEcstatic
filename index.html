@@ -14,22 +14,21 @@
             padding: 0;
         }
         header {
-            text-align: center; /* No separate background color */
+            text-align: center;
             padding: 20px;
         }
         h1 {
             margin: 0;
-            font-size: 3.5em; /* Larger title for PAT PAIGE */
-            font-family: Monaco, monospace; /* Monaco font */
+            font-size: 3.5em; /* Larger title */
+            font-family: Monaco, monospace; /* Monaco font for title */
             text-transform: uppercase;
         }
-        h2 {
-            margin: 0;
-            font-size: 1.3em; /* Smaller subtitle */
-            font-family: Monaco, monospace; /* Monaco font */
-            color: grey; /* Grey color for subtitle */
+        .subtitle {
+            font-size: 1.2em;
+            color: grey;
+            font-family: Monaco, monospace;
             text-transform: uppercase;
-            margin-top: 10px; /* Some spacing between title and subtitle */
+            margin-top: 10px;
         }
         nav {
             display: flex;
@@ -38,7 +37,7 @@
         }
         nav a {
             margin: 0 20px;
-            font-size: 1.0em;
+            font-size: 1.2em;
             text-transform: uppercase;
             text-decoration: none;
             color: grey;
@@ -53,6 +52,12 @@
         section {
             padding: 30px;
             text-align: center;
+        }
+        h2 {
+            color: #4a4a4a;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
         }
         .tour-gallery {
             display: flex;
@@ -108,7 +113,13 @@
             border-radius: 20px;
         }
         .tour:hover .hover-text {
-            opacity: 1;
+            opacity: 1; /* Shows hover-text on hover */
+        }
+        /* Add the following to support tap events on mobile */
+        .tour:focus .hover-text, 
+        .tour:active .hover-text {
+            opacity: 1; /* Shows hover-text on tap (focus or active) for mobile devices */
+            outline: none; /* Optional: removes the focus outline on mobile */
         }
 
         /* Media query for mobile devices */
@@ -123,8 +134,8 @@
 <body>
 
 <header>
-    <h1>PAT PAIGE</h1>
-    <h2>Tours | Workshops | Coaching</h2>
+    <h1>Pat Paige</h1>
+    <div class="subtitle">Tours | Workshops | Coaching</div>
     <nav>
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -133,7 +144,7 @@
 </header>
 
 <section>
-    <h2>Upcoming for 2025</h2>
+    <h2>Upcoming Freediving Tours and Workshops 2025</h2>
     <div class="tour-gallery">
         <div class="tour">
             <img src="Bunaken-1.jpg" alt="Manado">
