@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #e0f7fa; /* Unified background color */
+            background-color: #e0f7fa;
             margin: 0;
             padding: 0;
         }
@@ -19,8 +19,8 @@
         }
         h1 {
             margin: 0;
-            font-size: 3.5em; /* Larger title */
-            font-family: Monaco, monospace; /* Monaco font for title */
+            font-size: 3.5em;
+            font-family: Monaco, monospace;
             text-transform: uppercase;
         }
         .subtitle {
@@ -44,7 +44,7 @@
             transition: color 0.3s ease;
         }
         nav a.active {
-            color: #87ceeb; /* Baby blue for selected menu item */
+            color: #87ceeb;
         }
         nav a:hover {
             color: #87ceeb;
@@ -114,12 +114,6 @@
         }
         .tour:hover .hover-text {
             opacity: 1; /* Shows hover-text on hover */
-        }
-        /* Add the following to support tap events on mobile */
-        .tour:focus .hover-text, 
-        .tour:active .hover-text {
-            opacity: 1; /* Shows hover-text on tap (focus or active) for mobile devices */
-            outline: none; /* Optional: removes the focus outline on mobile */
         }
 
         /* Media query for mobile devices */
@@ -202,6 +196,16 @@
         </div>
     </div>
 </section>
+
+<!-- JavaScript to handle tap events for mobile devices -->
+<script>
+document.querySelectorAll('.tour').forEach(function(tour) {
+    tour.addEventListener('click', function() {
+        const hoverText = tour.querySelector('.hover-text');
+        hoverText.style.opacity = hoverText.style.opacity === '1' ? '0' : '1';
+    });
+});
+</script>
 
 </body>
 </html>
